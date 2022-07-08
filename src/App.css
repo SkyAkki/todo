@@ -1,0 +1,146 @@
+.App{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+/* Two Master Parent elements */
+aside{
+  background-color: #373C3F;
+  height: 100vh;
+}
+main{
+  background-color: #2F3437;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Element directly inside main */
+h1{
+  border-bottom: 2px #D4C8C8 solid;
+  padding-bottom: 30px;
+  width: 100vh;
+  font-size: 5em;
+  color: #ffffff;
+  margin: 0px;
+  text-align: center;
+}
+.addTask{
+  justify-self: end;
+  cursor: pointer;
+}
+.addTask>p{
+  color: #ffffff;
+  font-size: 3em;
+  display: inline;
+}
+
+/* toDoList is also directly inside main  */
+.toDoList{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: stretch;
+}
+
+/* =================== FORM INPUT STYLES =============*/
+.formComponent{
+  position: absolute;
+  left: 40%;
+  height: 30%;
+  width: 30%;
+  background-color: #676f74;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.formComponent > div{
+  display: flex;
+  font-size: 2rem;
+  text-align: start;
+}
+input[type=text]{
+  background: #414648;
+  border: none;
+  color: #F0F5FB;
+  outline: none;
+  font-size: large;
+}
+select{
+  background-color: #414648;
+  color: #F0F5FB;
+  outline: none;
+  border: none;
+}
+input[type=date]{
+  background-color: #414648;
+  color: #F0F5FB;
+  outline: none;
+  border: none;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+/* ========================================================== */
+
+
+/* ============== TASK LIST STYLES =================  */
+li{
+  background-color: #D9D9D9;
+  list-style: none;
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  justify-content: space-around;
+  order: 0;
+}
+.date{
+  font-size: 0.5em;
+}
+input[type=checkbox]:checked ~ div.strikethrough{
+  text-decoration: line-through;
+}
+input[type=checkbox]{
+  height: 100%;
+  width: 5%;
+}
+.deleteIcon{
+  background-image: url(./assets/images/delete.png);
+  background-size: contain;
+  height: 50%;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+.deleteIcon:hover{
+  box-shadow: 0px 5px 10px -8px black;
+  transform: scale(1.1);
+}
+.up-arrow{
+  background-image: url(./assets/images/caret-arrow-up.png);
+  background-size: contain;
+  height: 50%;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+.down-arrow{
+  background-image: url(./assets/images/caret-down.png);
+  background-size: contain;
+  height: 50%;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+.arrow:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px -8px black;
+}
+/* ========================================================== */
